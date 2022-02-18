@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+}
+.topheading{
+    text-align: center;
+    color: white;
+    line-height: 2px;
+    position: relative;
+    top: 10%;
+}
+.memory-game {
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    /* border: 2px solid black; */
+    perspective: 10000px;
+    position: relative;
+    top: 18%;
+}
+
+.memory-card {
+    border: 1px solid red;
+    width: 24.6%;
+    height: 33%;
+    position: relative;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.memory-card:active {
+    transform: scale(0.97);
+    transition: transform .5s;
+}
+
+.front-side,
+.back-side {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    border: 1px solid green;
+    backface-visibility: hidden;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.back-side {
+    transform: rotateY(180deg);
+}
+
+.flip {
+    transform: rotateY(180deg);
+}
+
+.score {
+    position: absolute;
+    left: 80%;
+    border: 2px solid blue;
+    height: 30%;
+    width: 15%;
+    top: 33%;
+    /* border-image: linear-gradient(blue,yellow); */
+}
+
+.score h1 {
+    position: absolute;
+    left: 20%;
+    font-size: 30px;
+    font-weight: 900;
+    color: white;
+}
+
+.score h2 {
+    position: absolute;
+    left: 35%;
+    font-size: 100px;
+    font-weight: 900;
+    color: white;
+    top: 20%;
+}
